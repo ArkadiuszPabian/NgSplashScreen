@@ -2,6 +2,8 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/~/github.com/ArkadiuszPabian/NgSplashScreen)
+
 This project demonstrates how to implement a custom splash screen in an Angular application that stays visible until all long-running asynchronous initialization tasks are completed.
 
 ## Getting Started
