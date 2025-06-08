@@ -1,20 +1,26 @@
 # Angular Splash Screen with Async Initialization
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
 This project demonstrates how to implement a custom splash screen in an Angular application that stays visible until all long-running asynchronous initialization tasks are completed.
 
 ## Getting Started
 
-Follow these steps to run the project locally:
+### Requirements
+
+Ensure you have [Node.js](https://nodejs.org/en/download) installed. This project supports:
+
+- Node.js 18.x (from 18.19.1 onward)
+- Node.js 20.x (from 20.11.1 onward)
+- Node.js 22.x (from 22.0.0 onward)
 
 ### Install Dependencies
 
-Make sure you have Node.js and npm installed, then run:
+Install the required packages:
 
 ```
 npm install
 ```
-
-> Supported Node versions: ^18.19.1 || ^20.11.1 || ^22.0.0
 
 ### Run the Application
 
@@ -103,3 +109,7 @@ In real-world applications, testing is essential. This example skips tests only 
 All unused spec files (`*.spec.ts`) and test configuration were removed to reduce noise and improve focus. Additionally, test-related npm packages like `karma`, and `jasmine` were trimmed from `package.json` to keep dependencies lean and build times fast.
 
 This results in a cleaner, faster project that's easier to clone, run, and understand — ideal for educational purposes.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).

@@ -1,13 +1,29 @@
 {
   "name": "ng-splash-screen",
   "version": "1.0.0",
+  "private": true,
+  "description": "Custom Angular splash screen with async initialization",
+  "license": "MIT",
+  "author": "Arkadiusz Pabian <arkadiusz.pabian@gmail.com> (https://github.com/ArkadiuszPabian)",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development"
   },
-  "private": true,
+  "keywords": [
+    "angular",
+    "splash screen",
+    "app initializer",
+    "async initialization",
+    "preloader",
+    "demo"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ArkadiuszPabian/NgSplashScreen.git"
+  },
+  "homepage": "https://github.com/ArkadiuszPabian/NgSplashScreen#readme",
   "dependencies": {
     "@angular/animations": "^19.1.0",
     "@angular/common": "^19.1.0",
