@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Angular Splash Screen example</title>
+    <base href="/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  </head>
+  <body>
+    <app-root>
+      <!-- START Splash screen -->
+
+      <!-- Styles -->
+      <style>
+        body {
+          margin: 0;
+          padding: 0;
+          background: linear-gradient(to bottom right, #56c2c0, #2c9b9a);
+          font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+          height: 100vh;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          overflow: hidden;
+          position: relative;
+        }
+
+        body::after {
+          content: "";
+          position: fixed;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          opacity: 0;
+          background: white;
+          transition: opacity 1s ease-in-out;
+          z-index: 9999;
+          pointer-events: none;
+        }
+
+        body.fade-out::after {
+          opacity: 1;
+        }
+
+        .splash-container {
+          text-align: center;
+          position: relative;
+          opacity: 1;
+          transition: opacity 1s ease-out;
+        }
+
+        body.fade-out .splash-container {
+          opacity: 0;
+        }
+
+        .circle-outline {
+          position: absolute;
+          width: 400px;
+          height: 400px;
+          border-radius: 50%;
+          border: 2px solid rgba(255, 255, 255, 0.08);
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          box-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+          animation: pulse 2.5s infinite ease-in-out;
+        }
+
+        @keyframes pulse {
+          0%,
+          100% {
+            transform: translate(-50%, -50%) scale(1);
+            opacity: 0.8;
+          }
+          50% {
+            transform: translate(-50%, -50%) scale(1.05);
+            opacity: 1;
+          }
+        }
+
+        .logo {
+          width: 90px;
+          height: auto;
+          margin-bottom: 20px;
+          animation: bounceIn 1s ease-out forwards;
+        }
+
+        @keyframes bounceIn {
+          0% {
+            transform: scale(0.5);
+            opacity: 0;
+          }
+          60% {
+            transform: scale(1.1);
+            opacity: 1;
+          }
+          100% {
+            transform: scale(1);
+          }
+        }
+
+        .loading-text {
+          color: #ffffff;
+          font-size: 1.2rem;
+          font-weight: 600;
+        }
+
+        .jumping-dots {
+          display: inline-block;
+          margin-left: 5px;
+        }
+
+        .dot {
+          display: inline-block;
+          width: 3px;
+          height: 3px;
+          background-color: #fff;
+          border-radius: 50%;
+          animation: jump 1.4s infinite ease-in-out;
+        }
+
+        .dot:nth-child(1) {
+          animation-delay: 0s;
+        }
+        .dot:nth-child(2) {
+          animation-delay: 0.2s;
+        }
+        .dot:nth-child(3) {
+          animation-delay: 0.4s;
+        }
+
+        @keyframes jump {
+          0%,
+          80%,
+          100% {
+            transform: translateY(0);
+            opacity: 0.4;
+          }
+          40% {
+            transform: translateY(-6px);
+            opacity: 1;
+          }
+        }
+      </style>
+
+      <!-- Content -->
+      <div class="splash-container" id="splash">
+        <div class="circle-outline"></div>
+        <img
+          class="logo"
+          src="https://angular.io/assets/images/logos/angular/angular.svg"
+          alt="Logo"
+        />
+        <div class="loading-text">
+          <span id="updater"></span>
+          <span class="jumping-dots">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </span>
+        </div>
+      </div>
+
+      <!-- Place for scripts -->
+
+      <!-- END Splash screen -->
+    </app-root>
+  </body>
+</html>
